@@ -1,0 +1,16 @@
+--- drivers/platform/x86/intel-hid.c.orig	2020-05-29 13:13:43.768032597 +0500
++++ drivers/platform/x86/intel-hid.c	2020-05-29 13:19:30.089899469 +0500
+@@ -79,6 +79,13 @@ static const struct dmi_system_id button
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "Wacom MobileStudio Pro 16"),
+ 		},
+ 	},
++	{
++		.ident = "HP Spectre x2 (2015)",
++		.matches = {
++			DMI_MATCH(DMI_SYS_VENDOR, "HP"),
++			DMI_MATCH(DMI_PRODUCT_NAME, "HP Spectre x2 Detachable"),
++		},
++	},
+ 	{ }
+ };
+ 
